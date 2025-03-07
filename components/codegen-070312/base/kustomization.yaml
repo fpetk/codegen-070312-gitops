@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  argocd/app-name: codegen-070312
+  janus-idp.io/tekton: codegen-070312
+  backstage.io/kubernetes-id: codegen-070312
+  backstage.io/kubernetes-namespace: rhdh-app
+  app.kubernetes.io/part-of: codegen-070312
+resources:
+  - deployment-model-server.yaml
+  - service-model-server.yaml
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
+  - model-config.yaml
+  - rhoai/
